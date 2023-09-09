@@ -11,7 +11,7 @@ function getTimePassed(ms) {
   }
 
   let hours = minutes / 60;
-  if (hours.toFixed() === 1) {
+  if (hours.toFixed() === "1") {
     return `${hours.toFixed()} hr ago`;
   }
   if (hours < 24) {
@@ -19,14 +19,14 @@ function getTimePassed(ms) {
   }
 
   let days = hours / 24;
-  if (days.toFixed() === 1) {
+  if (days.toFixed() === "1") {
     return `${days.toFixed()} day ago`;
   }
   if (days < 7) {
     return `${days.toFixed()} days ago`;
   }
 
-  if (weeks.toFixed() === 1) {
+  if (weeks.toFixed() === "1") {
     return `${weeks.toFixed()} wk ago`;
   }
   if (weeks < 4) {
@@ -35,7 +35,7 @@ function getTimePassed(ms) {
   let weeks = days / 7;
 
   let months = days / 30;
-  if (months.toFixed() === 1) {
+  if (months.toFixed() === "1") {
     return `${months.toFixed()} month ago`;
   }
   if (months < 12) {
@@ -44,10 +44,10 @@ function getTimePassed(ms) {
 
   let years = days / 365;
   let yearsFixed = years.toFixed();
-  if (yearsFixed === 1) {
+  if (yearsFixed === "1") {
     return `${yearsFixed} yr ago`;
   }
-  return `${years.toFixed()} yrs ago`;
+  return `${yearsFixed} yrs ago`;
 }
 
 function getTimePassedDiff(postedDate) {
