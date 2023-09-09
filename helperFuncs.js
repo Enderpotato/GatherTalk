@@ -26,13 +26,13 @@ function getTimePassed(ms) {
     return `${days.toFixed()} days ago`;
   }
 
+  let weeks = days / 7;
   if (weeks.toFixed() === "1") {
     return `${weeks.toFixed()} wk ago`;
   }
   if (weeks < 4) {
     return `${weeks.toFixed()} wks ago`;
   }
-  let weeks = days / 7;
 
   let months = days / 30;
   if (months.toFixed() === "1") {
